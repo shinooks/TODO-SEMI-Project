@@ -1,0 +1,33 @@
+### Post request to example server
+POST http://localhost:8080/todo/add
+Content-Type: application/json
+
+{
+  "title": "Sample Todo",
+  "description": "This is a test todo item",
+  "status": "pending",
+  "sDate": "2024-09-13T10:00:00",
+  "eDate": "2024-09-15T18:00:00"
+}
+
+### Get Todo List
+GET http://localhost:8080/todo/list
+Accept: application/json
+
+
+### Edit an existing Todo
+PUT http://localhost:8080/todo/edit
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Updated Todo",
+  "description": "This is an updated todo item",
+  "status": "completed",
+  "sDate": "2024-09-13T10:00:00",
+  "eDate": "2024-09-15T18:00:00"
+}
+
+
+### Delete a Todo
+DELETE http://localhost:8080/todo/delete?id=1
